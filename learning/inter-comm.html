@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Document</title>
+    <link rel="stylesheet" href="css/bulma.min.css" />
+    <style>
+    body{
+        padding-top:20px;
+    }
+    </style>
+</head>
+<body class="container">
+    
+    <div id="root">
+        <coupon></coupon>
+        <h1 v-if="isApplied">Coupon is applied</h4>
+        <h1 v-if="isInvalid">Coupon Code is Invalid</h4>
+    </div>    
+
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script src="inter-comm/main.js"></script>
+</body>
+</html>

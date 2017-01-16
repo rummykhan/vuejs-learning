@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        .isLoading{
+            background:red
+        }
+    </style>
+</head>
+<body>
+
+<div id="root">
+    <input type="button" v-bind:title="title" value="hover over me">
+    <input type="button" value="Toggle Button" v-bind:class="{ 'isLoading':isLoading }" v-on:click="toggleClass">
+</div>
+
+
+
+<script type="text/javascript" src="https://unpkg.com/vue@2.1.4/dist/vue.js"></script>
+<script type="text/javascript">
+    let data = {
+        title: 'Im the new title from javascript.',
+        isLoading: false
+    };
+
+    var app = new Vue({
+        el: '#root',
+        data:data,
+        methods: {
+            toggleClass : function(){
+                this.isLoading = !this.isLoading
+            }
+        }
+    });
+
+</script>
+</body>
+</html>
