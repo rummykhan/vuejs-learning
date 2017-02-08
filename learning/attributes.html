@@ -10,6 +10,14 @@
 </head>
 <body>
 
+<div class="container is-fluid">
+    <div class="notification">
+        <h1 class="has-text-centered">
+            <a href="../index.html">Home</a>
+        </h1>
+    </div>
+</div>
+
 <div id="root">
     <input type="button" v-bind:title="title" value="hover over me">
     <input type="button" value="Toggle Button" v-bind:class="{ 'isLoading':isLoading }" v-on:click="toggleClass">
