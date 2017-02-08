@@ -8,7 +8,7 @@ Vue.component('modal', {
                     
                     <header class="modal-card-head">
                         <p class="modal-card-title">
-                            My Modal
+                            <slot name="header"></slot>
                         </p>
                         <button class="delete"></button>
                     </header>

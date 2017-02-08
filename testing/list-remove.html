@@ -7,6 +7,17 @@
         .container{
             margin-top:20px;
         }
+        .list-item {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .list-enter-active, .list-leave-active {
+            transition: all 1s;
+        }
+        .list-enter, .list-leave-to /* .list-leave-active for <2.1.8 */ {
+            opacity: 0;
+            transform: translateY(30px);
+        }
     </style>
 </head>
 <body class="container">
@@ -14,7 +25,9 @@
 <div id="app" class="content">
     <h1>Remove Item from List and list childs are component too</h1>
     <div class="columns">
-        <list-item v-for="(item, index) in items" :item="item" v-on:remove="removeMe(item, index)"></list-item>
+        <transition-group name="list" tag="p">
+            <list-item v-for="(item, index) in items" :item="item" :key="item" v-on:remove="removeMe(item, index)"></list-item>
+        </transition-group>
     </div>
 </div>
 

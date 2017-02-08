@@ -13,7 +13,7 @@ window.Event = new class {
     listen(event, callback){
         this.vue.$on(event, callback);
     }
-}
+};
 
 Vue.component('coupon', {
 
