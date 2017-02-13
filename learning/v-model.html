@@ -1,19 +1,37 @@
 <!doctype html>
 <html>
 <head>
-    <title>Practical Components</title>
+    <title>Vue Model Modifiers</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.css" />
     <style type="text/css">
         .container{
             margin-top:20px;
         }
+        html{
+            background-color: white !important;
+        }
     </style>
 </head>
 <body class="container">
 
-<div id="app">
-    <input type="text" v-model="number">
+<div id="app" class="content">
+    <h1 class="has-text-centered">Laravel Modifiers</h1>
+    <hr>
+    <h2>
+        V-Number
+    </h2>
+    <p>
+        If you want user input to be automatically typecast as a number, you can add the number modifier to your v-model managed inputs:
+    </p>
+    <blockquote>
+        {{ html }}
+    </blockquote>
+    <h3>Example</h3>
+    <input type="number" v-model.number="number" class="input">
     {{ number }}
+    <p>
+        This is often useful, because even with type="number", the value of HTML input elements always returns a string.
+    </p>
 </div>
 
 
